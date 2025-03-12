@@ -1,0 +1,96 @@
+/* src/pages/SearchPage.css */
+
+/* Estilo general de la página de búsqueda */
+.search-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+/* Formulario de búsqueda centrado */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search-form input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+}
+
+.search-form input:focus {
+  border-color: #7528CC;
+}
+
+.search-form button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #7528CC;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-form button:hover {
+  background-color: #490e8b;
+}
+
+/* Títulos */
+h2, h3 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Sección para la lista de películas */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo para las tarjetas de películas */
+.movie-card {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+/* Efecto hover en las tarjetas de películas */
+.movie-card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la tarjeta cuando el mouse está encima */
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .movie-list {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-list {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-list {
+      grid-template-columns: 1fr;
+  }
+}

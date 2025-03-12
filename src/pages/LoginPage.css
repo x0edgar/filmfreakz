@@ -1,0 +1,93 @@
+/* Centrado del contenedor de inicio de sesión */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1b1b1b; /* Fondo oscuro */
+}
+
+.login-box {
+  background-color: #2c2c2c;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Botón de inicio de sesión con Google */
+.google-btn {
+  background-color: #7528CC;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.google-btn:hover {
+  background-color: #490e8b;
+}
+
+/* Botón regular de inicio de sesión */
+.login-button {
+  background-color: #7528CC;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  background-color: #490e8b;
+}
+
+/* Estilo de inputs */
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
+
+/* Enlaces para crear cuenta */
+.toggle-button {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #7528CC;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.toggle-button:hover {
+  text-decoration: underline;
+}
+
+/* Mensaje de error */
+.error {
+  color: red;
+  margin-top: 10px;
+}

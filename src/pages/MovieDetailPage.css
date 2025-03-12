@@ -1,0 +1,238 @@
+/* Estructura principal */
+.movie-detail-page {
+  background-color: #1b1b1b;
+  color: white;
+  padding: 40px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo del póster de la película */
+.movie-poster img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Información de la película */
+.movie-info {
+  flex: 1;
+  margin-left: 40px;
+}
+
+.movie-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.movie-tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.movie-overview {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.movie-details {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.movie-details p {
+  margin: 5px 0;
+}
+
+.movie-details strong {
+  color: #7528CC;
+}
+
+/* Sección del casting */
+.movie-cast {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.actor {
+  width: 120px;
+  text-align: center;
+}
+
+.actor-photo {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.actor p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Estilos del formulario de calificación más moderno */
+.review-form {
+  background-color: #2c2c2c;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  max-width: 350px;
+  width: 100%;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.7);
+}
+
+.review-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* Mejora del selector de calificación */
+.review-form select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #7528CC;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 1rem;
+  appearance: none; /* Para ocultar el estilo por defecto */
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-image: linear-gradient(45deg, transparent 50%, white 50%), linear-gradient(135deg, white 50%, transparent 50%);
+  background-position: calc(100% - 10px) calc(1em + 2px), calc(100% - 5px) 0.5em;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.review-form select:focus {
+  border-color: #490e8b;
+  background-color: #333;
+}
+
+.review-form select:hover {
+  background-color: #333;
+}
+
+/* Mejora del área de texto */
+.review-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #7528CC;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  resize: none;
+  height: 100px;
+}
+
+.review-form textarea:focus {
+  border-color: #490e8b;
+  background-color: #333;
+}
+
+.review-form button {
+  padding: 12px 25px;
+  background-color: #7528CC;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+}
+
+.review-form button:hover {
+  background-color: #490e8b;
+  transform: translateY(-3px);
+}
+
+/* Estilo de las reseñas */
+.review-container {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.review {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.review h3 {
+  margin: 0 0 10px 0;
+  color: #7528CC;
+}
+
+.review p {
+  margin-bottom: 10px;
+}
+
+.review strong {
+  color: #ffffff;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-info {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .review-form {
+    max-width: 100%;
+  }
+
+  .review {
+    max-width: 100%;
+  }
+}
+
+.star {
+  font-size: 4.3rem;  /* Tamaño de las estrellas */
+  color: #ccc;      /* Color base para estrellas vacías */
+  transition: color 0.3s ease;  /* Transición para un efecto suave */
+}
+
+.star.full {
+  color: #7528CC;  /* Color de las estrellas llenas (morado) */
+}
+
+.star.empty {
+  color: #ffffff;     /* Color de las estrellas vacías */
+}
+
+.star:hover, .star.full:hover {
+  color: #490e8b;  /* Color de las estrellas al hacer hover */
+}

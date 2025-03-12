@@ -1,0 +1,118 @@
+/* Estilo general */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin: 0;
+  background-color: #1b1b1b;
+}
+
+/* Sección de películas centrada */
+.movie-section {
+  padding: 40px 20px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px; /* Ajustamos el ancho máximo de las secciones */
+}
+
+/* Estilo de la lista de películas con diseño de cuadrícula */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centramos la lista de películas */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .movie-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-list {
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+  }
+}
+
+/* Estilo de las tarjetas de películas */
+.movie-card {
+  width: 80%; /* Tamaño ajustado de las tarjetas */
+  margin: 0 auto;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img {
+  width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
+  height: auto;
+  border-radius: 10px;
+}
+
+.movie-card h3 {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Efecto hover en las tarjetas de películas */
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Riel de películas (formato tipo carrusel) */
+.movie-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1b1b1b;
+}
+
+.movie-row img {
+  width: 180px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.movie-row img:hover {
+  transform: scale(1.1);
+}
+
+/* Sección de películas populares */
+.popular-movies-section {
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 0px; /* Ajuste para subir la sección */
+}
+
+/* Estilos adicionales para la página */
+h1 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.movie-card p {
+  color: white; /* Color blanco para el texto de votos y ratings */
+}
+
+.movie-card a {
+  text-decoration: none;
+  color: white;
+}
+
+.movie-card a:visited {
+  color: #6a0dad; /* Morado para los enlaces visitados */
+}
+
+.movie-card a:hover {
+  color: white; /* Mantener blanco en hover */
+}
